@@ -10,8 +10,8 @@ html {
   padding: 16px;
   box-sizing: border-box;
   display: grid;
-  gap: 20px;
-  grid-template: repeat(10, 8%) / repeat(4, 24%);
+  gap: 15px;
+  grid-template: 10% 10% 65% 10% / 25% 74%
 }
 
 .container div {
