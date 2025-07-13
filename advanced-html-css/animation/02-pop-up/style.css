@@ -1,3 +1,7 @@
+:root {
+  --modal-transition-mode: ease-in;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,10 +39,12 @@ button {
   top: 50%;
   left: 50%;
   transform-origin: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   pointer-events: none;
   opacity: 0%;
   text-align: center;
+  transition: opacity 300ms var(--modal-transition-mode),
+              transform 300ms var(--modal-transition-mode);
 }
 
 .popup-modal p {
@@ -54,6 +60,8 @@ button {
 }
 
 .popup-modal.show {
+  --modal-transition-mode: ease-out;
+  transform: translate(-50%, -50%);
   opacity: 100%;
   pointer-events: all;
 }
